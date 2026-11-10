@@ -1,5 +1,30 @@
 [
   {
+    "version": "0.21.2",
+    "date": "2026-11-10",
+    "title": "Mock server now generates valid base64 examples",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The mock server previously returned invalid base64 strings for byte-formatted fields, causing strict decoders to reject responses. It now generates properly encoded placeholders that decode cleanly."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Base64 examples are now valid for format: byte and contentEncoding: base64 or base64url strings",
+          "The default placeholder is c2NhbGFy (base64 for scalar), which works with both standard and URL-safe alphabets",
+          "Custom examples and defaults still take precedence over generated values"
+        ],
+        "ordered": false
+      },
+      {
+        "type": "href",
+        "href": "https://github.com/scalar/scalar/blob/main/packages/mock-server/CHANGELOG.md#0212",
+        "label": "Read full release notes"
+      }
+    ]
+  },
+  {
     "version": "0.21.1",
     "date": "2026-11-10",
     "title": "Decimal validation and deep nesting fixes",
